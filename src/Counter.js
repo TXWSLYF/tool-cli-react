@@ -1,4 +1,6 @@
 import React from "react";
+import styles from "./counter.css";
+console.log(styles)
 
 export const Counter = ({ name }) => {
   const [count, setCount] = React.useState(1);
@@ -7,7 +9,7 @@ export const Counter = ({ name }) => {
   }, [count]);
 
   return (
-    <div>
+    <div className={styles.counter}>
       计时器组件
       <div>{name}</div>
       <div onClick={addCount}>{count}</div>
